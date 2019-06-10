@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "353994254518",
+    "firebase_url": "https://hdd-test-ae10a.firebaseio.com",
+    "project_id": "hdd-test-ae10a",
+    "storage_bucket": "hdd-test-ae10a.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:353994254518:android:ebc992b7051c4002",
+        "android_client_info": {
+          "package_name": "com.duonghd.test.kdb"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "353994254518-0banlir6emdnmivdunm5f0eo3diu0b4q.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.duonghd.test.kdb",
+            "certificate_hash": "d295eb6639b99b8a1af9d13f4ec68fc8fcf226ae"
+          }
+        },
+        {
+          "client_id": "353994254518-hrn277qbvsfe82u90urlt1dokh9ijbvf.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCycha6XDSEtDfC-yWqZtJ8wDrfPn6emHc"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "353994254518-hrn277qbvsfe82u90urlt1dokh9ijbvf.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

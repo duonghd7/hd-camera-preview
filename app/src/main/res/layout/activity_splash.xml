@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/activity_splash_tv_camera"
+        android:layout_width="200dp"
+        android:layout_height="40dp"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="20dp"
+        android:background="#2A8BCE"
+        android:gravity="center"
+        android:text="CAMERA"
+        android:textColor="#ffffff" />
+
+    <TextView
+        android:id="@+id/activity_splash_tv_progress"
+        android:layout_width="200dp"
+        android:layout_height="40dp"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="20dp"
+        android:background="#2A8BCE"
+        android:gravity="center"
+        android:text="PROGRESS"
+        android:textColor="#ffffff" />
+
+    <TextView
+        android:id="@+id/activity_splash_tv_glide"
+        android:layout_width="200dp"
+        android:layout_height="40dp"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="20dp"
+        android:background="#2A8BCE"
+        android:gravity="center"
+        android:text="GLIDE"
+        android:textColor="#ffffff" />
+
+    <TextView
+        android:id="@+id/activity_splash_tv_calendar"
+        android:layout_width="200dp"
+        android:layout_height="40dp"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="20dp"
+        android:background="#2A8BCE"
+        android:gravity="center"
+        android:text="CALENDAR"
+        android:textColor="#ffffff" />
+
+    <TextView
+        android:id="@+id/activity_splash_tv_pager"
+        android:layout_width="200dp"
+        android:layout_height="40dp"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="20dp"
+        android:background="#2A8BCE"
+        android:gravity="center"
+        android:text="PAGER"
+        android:textColor="#ffffff" />
+</LinearLayout>

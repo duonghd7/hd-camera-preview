@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="attrKDBCalendar">
+        <attr name="kdbSwipeable" format="boolean" />
+        <attr name="kdbMonth" format="integer" />
+        <attr name="kdbYear" format="integer" />
+        <attr name="kdbPaddingLeft" format="dimension" />
+        <attr name="kdbPaddingRight" format="dimension" />
+    </declare-styleable>
+</resources>

@@ -1,0 +1,2 @@
+include ':app', ':camera_preview'
+project(':camera_preview').projectDir = new File('app/libs/camera_preview')
