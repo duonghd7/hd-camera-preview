@@ -1,7 +1,9 @@
 package com.hdd.camera_preview;
 
+import android.content.Context;
 import android.graphics.BitmapFactory;
 import android.hardware.Camera;
+import android.media.AudioManager;
 import android.util.Log;
 import android.view.SurfaceHolder;
 
@@ -12,10 +14,11 @@ import android.view.SurfaceHolder;
  */
 
 public class Camera1 extends CameraImpl {
+    private static final String TAG = Camera1.class.getSimpleName();
     private Camera camera;
 
-    public Camera1(SurfaceHolder surfaceHolder) {
-        super(surfaceHolder);
+    public Camera1(SurfaceHolder surfaceHolder, Context context) {
+        super(surfaceHolder, context);
     }
 
     @Override
@@ -24,7 +27,6 @@ public class Camera1 extends CameraImpl {
         surfaceHolder.addCallback(new SurfaceHolder.Callback() {
             @Override
             public void surfaceCreated(SurfaceHolder holder) {
-                Log.e("test", "surfaceCreated-0");
                 if (camera == null) camera = getCameraInstance();
                 try {
                     camera.setPreviewDisplay(holder);
@@ -35,18 +37,17 @@ public class Camera1 extends CameraImpl {
 
                     camera.startPreview();
                 } catch (Exception e) {
-                    Log.e("Ex", "surfaceCreated-0: " + e.getMessage());
+                    Log.e(TAG, "" + e.getMessage());
                 }
             }
 
             @Override
             public void surfaceChanged(SurfaceHolder holder, int format, int width, int height) {
-                Log.e("test", "surfaceChanged-2 -> w:" + width + " - h: " + height);
+
             }
 
             @Override
             public void surfaceDestroyed(SurfaceHolder holder) {
-                Log.e("test", "surfaceDestroyed-3");
                 stopPreviewAndFreeCamera();
             }
         });
@@ -60,7 +61,7 @@ public class Camera1 extends CameraImpl {
         try {
             c = Camera.open(); // attempt to get a Camera instance
         } catch (Exception e) {
-            Log.e("Ex", "getCameraInstance-0: " + e.getMessage());
+            Log.e(TAG, "" + e.getMessage());
         }
         return c; // returns null if camera is unavailable
     }
@@ -77,7 +78,15 @@ public class Camera1 extends CameraImpl {
     public void takePicture(final TakenPictureCallback callback) {
         try {
             if (camera != null) {
-                camera.takePicture(null, null, new Camera.PictureCallback() {
+                camera.takePicture(new Camera.ShutterCallback() {
+                    @Override
+                    public void onShutter() {
+                        AudioManager mgr = (AudioManager) context.getSystemService(Context.AUDIO_SERVICE);
+                        if (mgr != null) {
+                            mgr.playSoundEffect(AudioManager.FLAG_PLAY_SOUND);
+                        }
+                    }
+                }, null, new Camera.PictureCallback() {
                     @Override
                     public void onPictureTaken(byte[] data, Camera camera) {
                         BitmapFactory.Options options = new BitmapFactory.Options();

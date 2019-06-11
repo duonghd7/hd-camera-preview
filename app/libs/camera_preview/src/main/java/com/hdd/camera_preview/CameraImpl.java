@@ -1,5 +1,6 @@
 package com.hdd.camera_preview;
 
+import android.content.Context;
 import android.graphics.Bitmap;
 import android.graphics.Matrix;
 import android.view.SurfaceHolder;
@@ -12,9 +13,11 @@ import android.view.SurfaceHolder;
 
 public abstract class CameraImpl {
     protected SurfaceHolder surfaceHolder;
+    protected Context context;
 
-    public CameraImpl(SurfaceHolder surfaceHolder) {
+    public CameraImpl(SurfaceHolder surfaceHolder, Context context) {
         this.surfaceHolder = surfaceHolder;
+        this.context = context;
     }
 
     protected abstract void init();

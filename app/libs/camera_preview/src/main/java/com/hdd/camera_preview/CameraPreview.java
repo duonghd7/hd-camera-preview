@@ -43,7 +43,7 @@ public class CameraPreview extends SurfaceView {
     }
 
     private void initView(Context context) {
-        cameraImpl = new Camera1(getHolder());
+        cameraImpl = new Camera1(getHolder(), context);
         cameraImpl.init();
     }
 

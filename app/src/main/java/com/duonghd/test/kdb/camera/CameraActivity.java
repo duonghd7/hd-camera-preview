@@ -75,7 +75,7 @@ public class CameraActivity extends AppCompatActivity {
 
     @Override
     protected void onResume() {
-        if (cameraPreview != null) cameraPreview.invalidate();
+       // if (cameraPreview != null) cameraPreview.invalidate();
         super.onResume();
     }
 
